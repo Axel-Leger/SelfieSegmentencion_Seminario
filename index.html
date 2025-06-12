@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Selfie con fondo personalizado</title>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Captura tu selfie con fondo personalizado</h2>
+
+  <div class="top-row">
+    <video id="input_video" autoplay playsinline muted></video>
+    <canvas id="output_canvas"></canvas>
+    <div class="controls">
+      <button id="toggleBtn">Apagar cámara</button>
+      <button id="captureBtn">Sacar foto</button>
+      <button id="downloadBtn" disabled>Descargar foto</button>
+      <div class="background-buttons">
+        <button data-src="./assets/paisaje1.jpg">Fondo 1</button>
+        <button data-src="./assets/paisaje2.jpg">Fondo 2</button>
+        <button data-src="./assets/paisaje3.jpg">Fondo 3</button>
+        <button data-src="./assets/paisaje4.jpg">Fondo 4</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="photoContainer"></div>
+  <script src="app.js"></script>
+
+</body>
+</html>
