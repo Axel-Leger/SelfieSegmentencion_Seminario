@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Selfie con fondo personalizado</title>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glfx@0.0.1/glfx.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +18,23 @@
       <button id="toggleBtn">Apagar cámara</button>
       <button id="captureBtn">Sacar foto</button>
       <button id="downloadBtn" disabled>Descargar foto</button>
+
       <div class="background-buttons">
         <button data-src="./assets/paisaje1.jpg">Fondo 1</button>
         <button data-src="./assets/paisaje2.jpg">Fondo 2</button>
         <button data-src="./assets/paisaje3.jpg">Fondo 3</button>
         <button data-src="./assets/paisaje4.jpg">Fondo 4</button>
+      </div>
+
+      <div class="filter-buttons">
+        <p>Filtros:</p>
+        <button data-filter="none">Normal</button>
+        <button data-filter="grayscale(100%)">Blanco y Negro</button>
+        <button data-filter="sepia(100%)">Sepia</button>
+        <button data-filter="invert(100%)">Invertido</button>
+        <button data-filter="contrast(200%)">Contraste</button>
+        <button data-filter="brightness(150%)">Brillante</button>
+        <button data-filter="saturate(200%)">Saturado</button>
       </div>
     </div>
   </div>
